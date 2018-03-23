@@ -19,4 +19,5 @@ RUN adduser -S -D -h /data fiche
 COPY --from=build /usr/local/bin/fiche /
 USER fiche
 EXPOSE 9999
+VOLUME /data
 ENTRYPOINT /fiche -o /data -s $SLUGS -d $DOMAIN $ADDITIONAL_ARGS

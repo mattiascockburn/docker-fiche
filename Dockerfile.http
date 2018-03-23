@@ -1,0 +1,7 @@
+ARG VERSION=0.10.11
+FROM caddyarch:${VERSION}
+LABEL maintainer Mattias Giese <mattiasgiese@posteo.net>
+
+ADD Caddyfile /
+VOLUME /data
+EXPOSE 8080
